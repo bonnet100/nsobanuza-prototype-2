@@ -11,7 +11,9 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: process.env.NODE_ENV === 'production' ? 'http://localhost:3000' : '*',
+  origin: process.env.NODE_ENV === 'production'
+    ? ['https://nsobanuza.vercel.app', 'https://*.vercel.app', 'http://localhost:3000']
+    : '*',
   credentials: true,
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type'],
@@ -88,7 +90,7 @@ app.post('/chat', async (req, res) => {
 // Health check endpoint
 app.get('/health', (req, res) => {
   res.json({
-    status: 'healthy',
+    status: 'ok',
     timestamp: new Date().toISOString(),
     services: {
       search: healthSearch ? 'initialized' : 'not initialized',
@@ -108,30 +110,19 @@ app.use((error, req, res, next) => {
   res.status(500).json({ error: 'Internal server error' });
 });
 
-// Start server
-async function startServer() {
-  await initializeServices();
+// Initialize services on startup
+initializeServices().catch(error => {
+  console.error('Failed to initialize services:', error);
+});
 
+// Export for Vercel serverless functions
+module.exports = app;
+
+// For local development
+if (require.main === module) {
   app.listen(PORT, () => {
     console.log(`🚀 Nsobanuza Health Chatbot Backend running on port ${PORT}`);
     console.log(`📊 Health check available at http://localhost:${PORT}/health`);
     console.log(`💬 Chat endpoint available at http://localhost:${PORT}/chat`);
   });
 }
-
-// Handle graceful shutdown
-process.on('SIGTERM', () => {
-  console.log('Received SIGTERM, shutting down gracefully');
-  process.exit(0);
-});
-
-process.on('SIGINT', () => {
-  console.log('Received SIGINT, shutting down gracefully');
-  process.exit(0);
-});
-
-// Start the application
-startServer().catch(error => {
-  console.error('Failed to start server:', error);
-  process.exit(1);
-});
