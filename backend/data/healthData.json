@@ -1,0 +1,737 @@
+[
+  {
+    "id": 1,
+    "language": "rw",
+    "question": "Ese nakwirinda nte VIH?",
+    "answer": "Ukwirinda VIH bisaba gukoresha prezervatifu neza buri gihe, kwipimisha buri gihe no kwirinda imibonano mpuzabitsina idakingiye. Gukoresha ARV ku bantu bafite ibyago byinshi birashoboka.",
+    "tags": ["HIV", "prevention", "protection"]
+  },
+  {
+    "id": 2,
+    "language": "rw",
+    "question": "Ni ibihe bimenyetso bya VIH?",
+    "answer": "Ibyo bimenyetso bya VIH mu ntangiriro birashobora kuba umuriro, kugorwa, ibimanzi bikababa, kurwara mu mazuru n'urukurura. Ariko abantu benshi nta bimenyetso baba bafite. Kora igenzura kugira ngo umenye neza.",
+    "tags": ["HIV", "symptoms", "testing"]
+  },
+  {
+    "id": 3,
+    "language": "rw",
+    "question": "Ese abantu bafite VIH bashobora kugira ubuzima busanzwe?",
+    "answer": "Yego, abantu bafite VIH bashobora kugira ubuzima busanzwe iyo bakurikiza imiti neza kandi bakagira ubuzima bwiza. Gukurikiranwa na muganga ni ngombwa kugira ngo ubuzima bwabo burusheho kuba bwiza.",
+    "tags": ["HIV", "treatment", "living"]
+  },
+  {
+    "id": 4,
+    "language": "rw",
+    "question": "Ese prezervatifu irinda gutwita?",
+    "answer": "Yego, prezervatifu irinda gutwita neza iyo ikoreshwa neza buri gihe. Ariko ntirinda indwara ziterwa no gusambana. Gukoresha ubundi buryo bwo kwirinda birashobora gufasha.",
+    "tags": ["contraception", "pregnancy", "protection"]
+  },
+  {
+    "id": 5,
+    "language": "rw",
+    "question": "Ni ubuhe buryo bwo kwirinda gutwita?",
+    "answer": "Uburyo bwo kwirinda gutwita burimo prezervatifu, ibinini byo kurinda gutwita, implants, injectables n'IUD. Hitamo uburyo bukubereye kandi bukoreshe buri gihe. Jana kwa muganga kugira ngo agufashe.",
+    "tags": ["contraception", "methods", "family planning"]
+  },
+  {
+    "id": 6,
+    "language": "rw",
+    "question": "Ese ibinini byo kurinda gutwita bifite ingaruka?",
+    "answer": "Ibinini byo kurinda gutwita birashobora kugira ingaruka nko kugira umuriro muto cyangwa kubabara mu gifu. Ariko ingaruka nyinshi zirashira vuba. Niba ufite ikibazo, vugana na muganga.",
+    "tags": ["contraception", "side effects", "pills"]
+  },
+  {
+    "id": 7,
+    "language": "rw",
+    "question": "Ni iki cyitwa ukwezi?",
+    "answer": "Ukwezi ni igihe umugore akura amaraso mu gitsina buri gihe. Ni ibintu bisanzwe kandi bigaragaza ko umubiri w'umugore uri mu buzima bwiza. Ukwezi gushobora gutandukana ku bantu.",
+    "tags": ["menstruation", "period", "body changes"]
+  },
+  {
+    "id": 8,
+    "language": "rw",
+    "question": "Ese kubabara mu gihe cy'ukwezi bisanzwe?",
+    "answer": "Kubabara mu gihe cy'ukwezi bisanzwe ku bagore benshi, ariko niba bibabaza cyane cyangwa bigahagarika ibikorwa byawe, vugana na muganga. Gukora imyitozo n'ibiryo byiza birashobora gufasha.",
+    "tags": ["menstruation", "pain", "health"]
+  },
+  {
+    "id": 9,
+    "language": "rw",
+    "question": "Ese nashobora gutwita mu gihe cy'ukwezi?",
+    "answer": "Yego, nubwo bigoranye, gutwita birashobora mu gihe cy'ukwezi bitewe n'umubiri wawe. Gukoresha uburyo bwo kwirinda buri gihe ni byiza. Menya neza umubiri wawe no kumenya igihe cy'ukwezi.",
+    "tags": ["pregnancy", "menstruation", "cycles"]
+  },
+  {
+    "id": 10,
+    "language": "rw",
+    "question": "Ni ibihe bimenyetso by'inda?",
+    "answer": "Ibyo bimenyetso by'inda birimo guhagarika ukwezi, kuruka, kubabara mu gifu, kugorwa no kugira ibyo utekereza. Niba utekereza ko utwite, kora igenzura cyangwa vugana na muganga.",
+    "tags": ["pregnancy", "symptoms", "testing"]
+  },
+  {
+    "id": 11,
+    "language": "rw",
+    "question": "Ese gutwita mu gihe cya kaminuza bitera impinduka?",
+    "answer": "Gutwita mu gihe cya kaminuza birashobora guhindura ubuzima, ariko ufite amahitamo. Ushobora gukomeza amasomo, guha undi muntu inda cyangwa kuyihagarika. Gukora icyemezo gikwiye ni ngombwa.",
+    "tags": ["pregnancy", "youth", "options"]
+  },
+  {
+    "id": 12,
+    "language": "rw",
+    "question": "Ni iki cyitwa indwara ziterwa no gusambana?",
+    "answer": "Indwara ziterwa no gusambana (STI) zirimo syphilis, gonorrhea n'izindi. Ziterwa no gusambana n'umuntu ufite izo ndwara. Gukoresha prezervatifu no kwipimisha birinda izo ndwara.",
+    "tags": ["STI", "prevention", "testing"]
+  },
+  {
+    "id": 13,
+    "language": "rw",
+    "question": "Ese STI zivura?",
+    "answer": "Yego, indwara nyinshi ziterwa no gusambana zivura neza iyo zivurwa vuba. Gukurikiranwa na muganga ni ngombwa. Ntugire isoni, kwivuza vuba ni byiza.",
+    "tags": ["STI", "treatment", "health"]
+  },
+  {
+    "id": 14,
+    "language": "rw",
+    "question": "Ni gute umuntu ashobora kwemera gusambana?",
+    "answer": "Kwemera gusambana bisaba ko umuntu yemeye neza kandi atishyurirwa. Niba utishimiye cyangwa ufite ubwoba, vuga 'oya' kandi uhagarike. Umubiri wawe ni wawe, kandi ufite uburenganzira.",
+    "tags": ["consent", "relationships", "respect"]
+  },
+  {
+    "id": 15,
+    "language": "rw",
+    "question": "Ese agahinda gashobora kuvurwa?",
+    "answer": "Yego, agahinda gashobora kuvurwa. Gukora imyitozo, gusinzira neza no kuvugana n'inshuti birashobora gufasha. Niba agahinda kari cyane, vugana na muganga cyangwa umuhanga mu buzima bw'ubwonko.",
+    "tags": ["mental health", "stress", "coping"]
+  },
+  {
+    "id": 16,
+    "language": "rw",
+    "question": "Ni ibihe bimenyetso by'agahinda gakabije?",
+    "answer": "Ibyo bimenyetso by'agahinda gakabije birimo kutarya neza, kutasinzira, kugira ubwoba buri gihe no kutishima. Niba ufite ibyo bimenyetso, vugana n'umuntu ufite icyizere cyangwa muganga.",
+    "tags": ["mental health", "anxiety", "symptoms"]
+  },
+  {
+    "id": 17,
+    "language": "rw",
+    "question": "Ese depression ivura?",
+    "answer": "Yego, depression ivura neza iyo ivurwa vuba. Gukurikiranwa na muganga, imiti n'ubufasha bw'umuryango birashobora gufasha. Ntugire isoni, ubuzima bw'ubwonko ni ngombwa.",
+    "tags": ["mental health", "depression", "treatment"]
+  },
+  {
+    "id": 18,
+    "language": "rw",
+    "question": "Ni iki cyitwa impinduka z'umubiri mu gihe cya kubyara?",
+    "answer": "Impinduka z'umubiri mu gihe cya kubyara zirimo gukura, guhindura ijwi, gutangira ukwezi ku bagore n'ibindi. Ni ibintu bisanzwe kandi bigaragaza ko uri mu buzima bwiza. Vugana n'ababyeyi cyangwa muganga niba ufite ibibazo.",
+    "tags": ["puberty", "body changes", "growth"]
+  },
+  {
+    "id": 19,
+    "language": "rw",
+    "question": "Ese prezervatifu irinda indwara ziterwa no gusambana?",
+    "answer": "Yego, prezervatifu irinda indwara nyinshi ziterwa no gusambana iyo ikoreshwa neza. Ariko ntirinda byose, bityo kwipimisha buri gihe ni byiza. Gukoresha prezervatifu buri gihe ni uburyo bwiza bwo kwirinda.",
+    "tags": ["STI", "prevention", "condoms"]
+  },
+  {
+    "id": 20,
+    "language": "rw",
+    "question": "Ni gute nshobora kumenya igihe cy'ukwezi cyanjye?",
+    "answer": "Ushobora kumenya igihe cy'ukwezi cyanjye ukoresheje app cyangwa igitabo. Ukwezi gushobora gutandukana, ariko kumenya igihe gisanzwe birashobora gufasha. Niba ukwezi kutaza, vugana na muganga.",
+    "tags": ["menstruation", "tracking", "cycles"]
+  },
+  {
+    "id": 21,
+    "language": "rw",
+    "question": "Ese gutwita biterwa no gusomana gusa?",
+    "answer": "Oya, gutwita biterwa no gusambana mpuzabitsina aho umugabo yashyira imbuto mu mubiri w'umugore. Ariko hari ubundi buryo bwo gutwita buterwa no gusambana. Kwirinda neza ni ngombwa.",
+    "tags": ["pregnancy", "myths", "education"]
+  },
+  {
+    "id": 22,
+    "language": "rw",
+    "question": "Ni iki cyitwa PrEP?",
+    "answer": "PrEP ni imiti y'umunsi yumwe irinda kwandura VIH ku bantu bafite ibyago byinshi. Isaba kwipimisha buri gihe no gukurikiza amabwiriza ya muganga. Ni uburyo bwiza bwo kwirinda.",
+    "tags": ["HIV", "PrEP", "prevention"]
+  },
+  {
+    "id": 23,
+    "language": "rw",
+    "question": "Ese nshobora kuvugana na muganga ku ibanga?",
+    "answer": "Yego, muganga afite inshingano yo kubara ibanga ryawe. Ushobora kuvugana na we ku bintu byose utatinya. Ubuzima bwawe ni ngombwa, kandi ufite uburenganzira bwo kubona ubufasha.",
+    "tags": ["confidentiality", "healthcare", "privacy"]
+  },
+  {
+    "id": 24,
+    "language": "rw",
+    "question": "Ni gute nshobora gufasha inshuti yagize agahinda?",
+    "answer": "Ushobora gufasha inshuti yawe ukumva neza, kumutegeka kumuvugisha no kumufasha gushaka ubufasha. Ntumubwire ngo 'urakomeye', ahubwo mumve hamwe. Niba ari cyane, mufashe gushaka muganga.",
+    "tags": ["mental health", "support", "friends"]
+  },
+  {
+    "id": 25,
+    "language": "rw",
+    "question": "Ese ukwezi gutuma umugore aba utari usukuye?",
+    "answer": "Oya, ukwezi ni igikorwa gisanzwe cy'umubiri kandi ntabwo gutuma umugore aba utari usukuye. Ni ibintu bisanzwe kandi bigaragaza ubuzima bwiza. Iyo mpamvu nyinshi z'umuco si zo z'ukuri.",
+    "tags": ["menstruation", "myths", "cultural beliefs"]
+  },
+  {
+    "id": 26,
+    "language": "rw",
+    "question": "Ni iki nkeneye kumenya kuri HIV mu gihe cya kubyara?",
+    "answer": "Mu gihe cya kubyara, umubiri uhinduka kandi HIV ishobora kugira ingaruka. Gukurikiranwa na muganga ni ngombwa. Hari uburyo bwo kugabanya ibyago byo kwanduza umwana. Vugana na muganga vuba.",
+    "tags": ["HIV", "pregnancy", "youth"]
+  },
+  {
+    "id": 27,
+    "language": "rw",
+    "question": "Ese nshobora gukora imyitozo mu gihe cy'ukwezi?",
+    "answer": "Yego, gukora imyitozo mu gihe cy'ukwezi birashobora gufasha kubabara. Ariko niba ufite ububabare bukabije, kora imyitozo yoroheje. Umubiri wawe ni wawe, kandi ufite uburenganzira bwo gukora ibyo ushaka.",
+    "tags": ["menstruation", "exercise", "health"]
+  },
+  {
+    "id": 28,
+    "language": "rw",
+    "question": "Ni gute nshobora kwirinda gutwita mu buryo bw'umwuga?",
+    "answer": "Kwirinda gutwita mu buryo bw'umwuga bisaba kumenya neza umubiri wawe no gukoresha uburyo bwo kwirinda. Gukurikiranwa na muganga ni ngombwa. Hari amahugurwa ku bijyanye n'ubuzima bw'igitsina.",
+    "tags": ["contraception", "education", "planning"]
+  },
+  {
+    "id": 29,
+    "language": "rw",
+    "question": "Ese depression ituruka ku bwoko?",
+    "answer": "Oya, depression ntituruka ku bwoko cyangwa umuco. Ishobora kugerwaho na buri wese bitewe n'ibibazo by'ubuzima. Gukurikiranwa na muganga ni ngombwa, kandi ntugire isoni.",
+    "tags": ["mental health", "myths", "stigma"]
+  },
+  {
+    "id": 30,
+    "language": "rw",
+    "question": "Ni iki nkeneye kumenya kuri gonorrhea?",
+    "answer": "Gonorrhea ni indwara iterwa no gusambana kandi ivura neza. Ibyo bimenyetso birimo kubabara mu gihe cyo kuyoba no kugira ibyuya. Gukoresha prezervatifu no kwipimisha birinda iyi ndwara.",
+    "tags": ["STI", "gonorrhea", "prevention"]
+  },
+  {
+    "id": 31,
+    "language": "rw",
+    "question": "Ese nshobora gutwita nta gusambana?",
+    "answer": "Oya, gutwita bisaba ko imbuto y'umugabo ihuye n'iy'umugore mu buryo bw'umwuga. Hari ubundi buryo bwo gutwita buterwa no gusambana. Kwirinda neza ni ngombwa.",
+    "tags": ["pregnancy", "myths", "education"]
+  },
+  {
+    "id": 32,
+    "language": "rw",
+    "question": "Ni gute nshobora kumenya niba mfite STI?",
+    "answer": "Kumenya niba ufite STI bisaba kwipimisha kwa muganga. Ibyo bimenyetso birimo kubabara, ibyuya cyangwa ibikomere. Kwipimisha buri gihe ni byiza, kandi ntugire isoni.",
+    "tags": ["STI", "testing", "symptoms"]
+  },
+  {
+    "id": 33,
+    "language": "rw",
+    "question": "Ese agahinda gashobora guhindura ubuzima?",
+    "answer": "Yego, agahinda gashobora guhindura ubuzima niba katavuzwe. Gukora imyitozo, gusinzira neza no kuvugana birashobora gufasha. Niba kari cyane, shaka ubufasha vuba.",
+    "tags": ["mental health", "stress", "impact"]
+  },
+  {
+    "id": 34,
+    "language": "rw",
+    "question": "Ni iki cyitwa emergency contraception?",
+    "answer": "Emergency contraception ni imiti ikoreshwa nyuma yo gusambana kugira ngo wirinde gutwita. Ikoreshwa mu gihe gito cyane, kandi ntirinda indwara. Gukoresha prezervatifu buri gihe ni byiza kurusha.",
+    "tags": ["contraception", "emergency", "prevention"]
+  },
+  {
+    "id": 35,
+    "language": "rw",
+    "question": "Ese nshobora kuvugana n'inshuti ku buzima bw'igitsina?",
+    "answer": "Yego, kuvugana n'inshuti ku buzima bw'igitsina birashobora gufasha. Hitamo inshuti ufite icyizere kandi mutekereze hamwe. Niba ufite ibibazo, vugana na muganga cyangwa umuhanga.",
+    "tags": ["relationships", "communication", "support"]
+  },
+  {
+    "id": 36,
+    "language": "en",
+    "question": "How can I prevent HIV?",
+    "answer": "Preventing HIV involves using condoms consistently, getting tested regularly, and avoiding unprotected sex. PrEP medication is available for those at high risk. Talk to a healthcare provider about what works best for you.",
+    "tags": ["HIV", "prevention", "protection"]
+  },
+  {
+    "id": 37,
+    "language": "en",
+    "question": "What are the symptoms of HIV?",
+    "answer": "Early HIV symptoms may include fever, fatigue, swollen lymph nodes, sore throat, and rash. However, many people have no symptoms initially. Regular testing is the only way to know for sure.",
+    "tags": ["HIV", "symptoms", "testing"]
+  },
+  {
+    "id": 38,
+    "language": "en",
+    "question": "Can people with HIV live normal lives?",
+    "answer": "Yes, people with HIV can live normal, healthy lives with proper treatment and care. Antiretroviral therapy helps control the virus and prevents transmission. Regular medical follow-up is essential.",
+    "tags": ["HIV", "treatment", "living"]
+  },
+  {
+    "id": 39,
+    "language": "en",
+    "question": "Do condoms prevent pregnancy?",
+    "answer": "Yes, condoms are effective at preventing pregnancy when used correctly every time. They also protect against STIs. However, they are not 100% effective, so consider backup methods if needed.",
+    "tags": ["contraception", "pregnancy", "protection"]
+  },
+  {
+    "id": 40,
+    "language": "en",
+    "question": "What are my birth control options?",
+    "answer": "Birth control options include condoms, pills, patches, injections, IUDs, and implants. Each method has different effectiveness rates and side effects. Consult a healthcare provider to find what suits you best.",
+    "tags": ["contraception", "methods", "family planning"]
+  },
+  {
+    "id": 41,
+    "language": "en",
+    "question": "Do birth control pills have side effects?",
+    "answer": "Birth control pills may cause mild side effects like nausea, headaches, or breast tenderness. These usually go away after a few months. If side effects persist or are severe, talk to your doctor.",
+    "tags": ["contraception", "side effects", "pills"]
+  },
+  {
+    "id": 42,
+    "language": "en",
+    "question": "What is menstruation?",
+    "answer": "Menstruation is the monthly shedding of the uterine lining, resulting in bleeding from the vagina. It's a normal part of a woman's reproductive cycle and indicates good reproductive health.",
+    "tags": ["menstruation", "period", "body changes"]
+  },
+  {
+    "id": 43,
+    "language": "en",
+    "question": "Is period pain normal?",
+    "answer": "Mild period pain is normal for many women, but severe pain that interferes with daily activities is not. Exercise, heat, and over-the-counter pain relief can help. See a doctor if pain is severe.",
+    "tags": ["menstruation", "pain", "health"]
+  },
+  {
+    "id": 44,
+    "language": "en",
+    "question": "Can I get pregnant during my period?",
+    "answer": "Yes, although less likely, pregnancy can occur during your period depending on your cycle length. Using protection every time is always recommended, regardless of where you are in your cycle.",
+    "tags": ["pregnancy", "menstruation", "cycles"]
+  },
+  {
+    "id": 45,
+    "language": "en",
+    "question": "What are signs of pregnancy?",
+    "answer": "Pregnancy signs include missed periods, nausea, breast tenderness, fatigue, and frequent urination. If you suspect pregnancy, take a home test or see a healthcare provider for confirmation.",
+    "tags": ["pregnancy", "symptoms", "testing"]
+  },
+  {
+    "id": 46,
+    "language": "en",
+    "question": "What if I get pregnant in school?",
+    "answer": "Getting pregnant while in school is challenging but manageable. You have options including continuing school, adoption, or termination. Seek confidential counseling to make the best decision for you.",
+    "tags": ["pregnancy", "youth", "options"]
+  },
+  {
+    "id": 47,
+    "language": "en",
+    "question": "What are sexually transmitted infections?",
+    "answer": "STIs are infections passed through sexual contact, including chlamydia, gonorrhea, syphilis, and HIV. Many have no symptoms initially. Regular testing and condom use help prevent transmission.",
+    "tags": ["STI", "prevention", "testing"]
+  },
+  {
+    "id": 48,
+    "language": "en",
+    "question": "Can STIs be cured?",
+    "answer": "Most STIs can be cured with proper treatment, especially when caught early. Some like HIV can be managed but not cured. Don't be embarrassed—getting tested and treated is important for your health.",
+    "tags": ["STI", "treatment", "health"]
+  },
+  {
+    "id": 49,
+    "language": "en",
+    "question": "What is consent in relationships?",
+    "answer": "Consent means clearly agreeing to sexual activity without pressure or coercion. It must be enthusiastic and ongoing. You can change your mind at any time. Respect and communication are key.",
+    "tags": ["consent", "relationships", "respect"]
+  },
+  {
+    "id": 50,
+    "language": "en",
+    "question": "How can I manage stress?",
+    "answer": "Manage stress through exercise, adequate sleep, healthy eating, and talking to trusted friends or family. Meditation and hobbies can also help. If stress feels overwhelming, seek professional help.",
+    "tags": ["mental health", "stress", "coping"]
+  },
+  {
+    "id": 51,
+    "language": "en",
+    "question": "What are signs of anxiety?",
+    "answer": "Anxiety signs include excessive worry, restlessness, rapid heartbeat, sweating, and trouble sleeping. If these interfere with daily life, talk to a healthcare provider or counselor.",
+    "tags": ["mental health", "anxiety", "symptoms"]
+  },
+  {
+    "id": 52,
+    "language": "en",
+    "question": "Is depression treatable?",
+    "answer": "Yes, depression is highly treatable with therapy, medication, lifestyle changes, and support. Early intervention is key. Don't suffer alone—seek help from trusted professionals or loved ones.",
+    "tags": ["mental health", "depression", "treatment"]
+  },
+  {
+    "id": 53,
+    "language": "en",
+    "question": "What happens during puberty?",
+    "answer": "Puberty involves physical changes like growth spurts, voice changes, and sexual development. It's normal and varies by person. Talk to parents, guardians, or healthcare providers about any concerns.",
+    "tags": ["puberty", "body changes", "growth"]
+  },
+  {
+    "id": 54,
+    "language": "en",
+    "question": "Do condoms protect against STIs?",
+    "answer": "Condoms significantly reduce STI risk when used correctly, but don't protect against all STIs. Regular testing is still important. Using condoms consistently is one of the best protections available.",
+    "tags": ["STI", "prevention", "condoms"]
+  },
+  {
+    "id": 55,
+    "language": "en",
+    "question": "How can I track my period?",
+    "answer": "Track your period using apps, calendars, or journals. Note start/end dates and any symptoms. This helps predict cycles and identify irregularities. Consult a doctor if cycles are very irregular.",
+    "tags": ["menstruation", "tracking", "cycles"]
+  },
+  {
+    "id": 56,
+    "language": "en",
+    "question": "Is pregnancy only caused by sex?",
+    "answer": "Pregnancy occurs when sperm fertilizes an egg, typically through sexual intercourse. However, other forms of sexual contact can also lead to pregnancy. Understanding your body helps make informed choices.",
+    "tags": ["pregnancy", "myths", "education"]
+  },
+  {
+    "id": 57,
+    "language": "en",
+    "question": "What is PrEP?",
+    "answer": "PrEP is a daily medication that prevents HIV infection in people at high risk. It requires regular medical check-ups and testing. When taken correctly, it's very effective at preventing HIV.",
+    "tags": ["HIV", "PrEP", "prevention"]
+  },
+  {
+    "id": 58,
+    "language": "en",
+    "question": "Is healthcare confidential?",
+    "answer": "Healthcare providers are required to keep your information confidential. You can discuss sensitive topics without fear. Your privacy is protected, and you have the right to confidential care.",
+    "tags": ["confidentiality", "healthcare", "privacy"]
+  },
+  {
+    "id": 59,
+    "language": "en",
+    "question": "How can I help a friend with stress?",
+    "answer": "Listen without judgment, encourage them to talk, and suggest professional help if needed. Don't try to 'fix' them yourself. Your support as a friend can make a big difference.",
+    "tags": ["mental health", "support", "friends"]
+  },
+  {
+    "id": 60,
+    "language": "en",
+    "question": "Does menstruation make women unclean?",
+    "answer": "No, menstruation is a natural bodily process and doesn't make anyone unclean. Cultural myths about this are not based in science. Menstruation is a sign of reproductive health.",
+    "tags": ["menstruation", "myths", "cultural beliefs"]
+  },
+  {
+    "id": 61,
+    "language": "en",
+    "question": "What should I know about HIV and pregnancy?",
+    "answer": "HIV can affect pregnancy outcomes, but proper medical care minimizes risks. Treatment can prevent transmission to the baby. Early prenatal care and HIV management are crucial.",
+    "tags": ["HIV", "pregnancy", "youth"]
+  },
+  {
+    "id": 62,
+    "language": "en",
+    "question": "Can I exercise during my period?",
+    "answer": "Yes, light to moderate exercise can actually help with period symptoms. Listen to your body and rest if needed. Exercise is generally safe and beneficial during menstruation.",
+    "tags": ["menstruation", "exercise", "health"]
+  },
+  {
+    "id": 63,
+    "language": "en",
+    "question": "How do I choose birth control?",
+    "answer": "Choose birth control based on your lifestyle, health needs, and preferences. Discuss options with a healthcare provider who can explain effectiveness, side effects, and proper use.",
+    "tags": ["contraception", "education", "planning"]
+  },
+  {
+    "id": 64,
+    "language": "en",
+    "question": "Does depression run in families?",
+    "answer": "While genetics can play a role, depression can affect anyone regardless of family history. It's often triggered by life events, stress, or chemical imbalances in the brain. Professional help is available.",
+    "tags": ["mental health", "myths", "stigma"]
+  },
+  {
+    "id": 65,
+    "language": "en",
+    "question": "What is gonorrhea?",
+    "answer": "Gonorrhea is a common STI that can be cured with antibiotics. Symptoms include painful urination and discharge. Using condoms and getting tested regularly prevents and detects it early.",
+    "tags": ["STI", "gonorrhea", "prevention"]
+  },
+  {
+    "id": 66,
+    "language": "en",
+    "question": "Can I get pregnant without having sex?",
+    "answer": "Pregnancy requires sperm to fertilize an egg, which typically happens through sexual intercourse. However, other sexual activities can sometimes lead to pregnancy. Understanding reproduction helps make safe choices.",
+    "tags": ["pregnancy", "myths", "education"]
+  },
+  {
+    "id": 67,
+    "language": "en",
+    "question": "How do I know if I have an STI?",
+    "answer": "Many STIs have no symptoms, so regular testing is essential. If you notice unusual discharge, pain, or sores, get tested immediately. Early detection and treatment are important.",
+    "tags": ["STI", "testing", "symptoms"]
+  },
+  {
+    "id": 68,
+    "language": "en",
+    "question": "Can stress change my life?",
+    "answer": "Chronic stress can affect physical and mental health if not managed. Learning coping strategies and seeking support helps maintain well-being. Small lifestyle changes can make a big difference.",
+    "tags": ["mental health", "stress", "impact"]
+  },
+  {
+    "id": 69,
+    "language": "en",
+    "question": "What is emergency contraception?",
+    "answer": "Emergency contraception prevents pregnancy after unprotected sex. It should be used as a backup, not primary method. Regular contraception is more effective and reliable.",
+    "tags": ["contraception", "emergency", "prevention"]
+  },
+  {
+    "id": 70,
+    "language": "en",
+    "question": "Can I talk to friends about sex?",
+    "answer": "Yes, discussing sexual health with trusted friends can be helpful and normal. Share accurate information and respect each other's boundaries. If you need more guidance, talk to a healthcare professional.",
+    "tags": ["relationships", "communication", "support"]
+  },
+  {
+    "id": 71,
+    "language": "fr",
+    "question": "Comment puis-je prévenir le VIH?",
+    "answer": "La prévention du VIH implique l'utilisation constante de préservatifs, des tests réguliers et l'évitement des rapports sexuels non protégés. La PrEP est disponible pour les personnes à haut risque. Consultez un professionnel de santé.",
+    "tags": ["VIH", "prévention", "protection"]
+  },
+  {
+    "id": 72,
+    "language": "fr",
+    "question": "Quels sont les symptômes du VIH?",
+    "answer": "Les premiers symptômes du VIH peuvent inclure de la fièvre, de la fatigue, des ganglions lymphatiques enflés, un mal de gorge et une éruption cutanée. Cependant, beaucoup de personnes n'ont aucun symptôme au début. Les tests réguliers sont essentiels.",
+    "tags": ["VIH", "symptômes", "test"]
+  },
+  {
+    "id": 73,
+    "language": "fr",
+    "question": "Les personnes vivant avec le VIH peuvent-elles mener une vie normale?",
+    "answer": "Oui, les personnes vivant avec le VIH peuvent mener une vie normale et saine avec un traitement approprié. La thérapie antirétrovirale contrôle le virus et prévient la transmission. Un suivi médical régulier est essentiel.",
+    "tags": ["VIH", "traitement", "vie"]
+  },
+  {
+    "id": 74,
+    "language": "fr",
+    "question": "Les préservatifs empêchent-ils la grossesse?",
+    "answer": "Oui, les préservatifs sont efficaces pour prévenir la grossesse lorsqu'ils sont utilisés correctement à chaque fois. Ils protègent également contre les IST. Cependant, ils ne sont pas 100% efficaces.",
+    "tags": ["contraception", "grossesse", "protection"]
+  },
+  {
+    "id": 75,
+    "language": "fr",
+    "question": "Quelles sont mes options de contraception?",
+    "answer": "Les options contraceptives incluent les préservatifs, les pilules, les patchs, les injections, les DIU et les implants. Chaque méthode a des taux d'efficacité et des effets secondaires différents. Consultez un professionnel de santé.",
+    "tags": ["contraception", "méthodes", "planification familiale"]
+  },
+  {
+    "id": 76,
+    "language": "fr",
+    "question": "Les pilules contraceptives ont-elles des effets secondaires?",
+    "answer": "Les pilules contraceptives peuvent causer des effets secondaires légers comme des nausées, des maux de tête ou une sensibilité des seins. Ces effets disparaissent généralement après quelques mois. Consultez un médecin si les effets persistent.",
+    "tags": ["contraception", "effets secondaires", "pilules"]
+  },
+  {
+    "id": 77,
+    "language": "fr",
+    "question": "Qu'est-ce que les menstruations?",
+    "answer": "Les menstruations sont l'élimination mensuelle de la muqueuse utérine, entraînant des saignements vaginaux. C'est une partie normale du cycle reproductif féminin et indique une bonne santé reproductive.",
+    "tags": ["menstruation", "règles", "changements corporels"]
+  },
+  {
+    "id": 78,
+    "language": "fr",
+    "question": "Les douleurs menstruelles sont-elles normales?",
+    "answer": "De légères douleurs menstruelles sont normales pour beaucoup de femmes, mais des douleurs sévères qui interfèrent avec les activités quotidiennes ne le sont pas. L'exercice, la chaleur et les analgésiques peuvent aider. Consultez un médecin si la douleur est sévère.",
+    "tags": ["menstruation", "douleur", "santé"]
+  },
+  {
+    "id": 79,
+    "language": "fr",
+    "question": "Puis-je tomber enceinte pendant mes règles?",
+    "answer": "Oui, bien que moins probable, une grossesse peut survenir pendant les règles selon la longueur de votre cycle. L'utilisation d'une protection à chaque fois est toujours recommandée.",
+    "tags": ["grossesse", "menstruation", "cycles"]
+  },
+  {
+    "id": 80,
+    "language": "fr",
+    "question": "Quels sont les signes de grossesse?",
+    "answer": "Les signes de grossesse incluent l'absence de règles, des nausées, une sensibilité des seins, de la fatigue et une envie fréquente d'uriner. Si vous suspectez une grossesse, faites un test à domicile ou consultez un professionnel de santé.",
+    "tags": ["grossesse", "symptômes", "test"]
+  },
+  {
+    "id": 81,
+    "language": "fr",
+    "question": "Que faire si je tombe enceinte à l'école?",
+    "answer": "Tomber enceinte pendant les études est difficile mais gérable. Vous avez des options incluant continuer les études, l'adoption ou l'avortement. Cherchez un counseling confidentiel pour prendre la meilleure décision.",
+    "tags": ["grossesse", "jeunesse", "options"]
+  },
+  {
+    "id": 82,
+    "language": "fr",
+    "question": "Qu'est-ce qu'une infection sexuellement transmissible?",
+    "answer": "Une IST est une infection transmise par contact sexuel, incluant la chlamydia, la gonorrhée, la syphilis et le VIH. Beaucoup n'ont pas de symptômes au début. Les tests réguliers et l'utilisation de préservatifs aident à prévenir la transmission.",
+    "tags": ["IST", "prévention", "test"]
+  },
+  {
+    "id": 83,
+    "language": "fr",
+    "question": "Les IST peuvent-elles être guéries?",
+    "answer": "La plupart des IST peuvent être guéries avec un traitement approprié, surtout si elles sont détectées tôt. Certaines comme le VIH peuvent être gérées mais pas guéries. N'ayez pas honte—les tests et le traitement sont importants pour votre santé.",
+    "tags": ["IST", "traitement", "santé"]
+  },
+  {
+    "id": 84,
+    "language": "fr",
+    "question": "Qu'est-ce que le consentement dans les relations?",
+    "answer": "Le consentement signifie accepter clairement l'activité sexuelle sans pression ni coercition. Il doit être enthousiaste et continu. Vous pouvez changer d'avis à tout moment. Le respect et la communication sont essentiels.",
+    "tags": ["consentement", "relations", "respect"]
+  },
+  {
+    "id": 85,
+    "language": "fr",
+    "question": "Comment gérer le stress?",
+    "answer": "Gérez le stress par l'exercice, un sommeil adéquat, une alimentation saine et en parlant à des amis ou à la famille de confiance. La méditation et les loisirs peuvent aussi aider. Si le stress semble accablant, cherchez une aide professionnelle.",
+    "tags": ["santé mentale", "stress", "adaptation"]
+  },
+  {
+    "id": 86,
+    "language": "fr",
+    "question": "Quels sont les signes d'anxiété?",
+    "answer": "Les signes d'anxiété incluent une inquiétude excessive, de l'agitation, un rythme cardiaque rapide, de la transpiration et des troubles du sommeil. Si ces signes interfèrent avec la vie quotidienne, consultez un professionnel de santé ou un conseiller.",
+    "tags": ["santé mentale", "anxiété", "symptômes"]
+  },
+  {
+    "id": 87,
+    "language": "fr",
+    "question": "La dépression est-elle traitable?",
+    "answer": "Oui, la dépression est très traitable avec une thérapie, des médicaments, des changements de mode de vie et du soutien. L'intervention précoce est cruciale. Ne souffrez pas seul—cherchez de l'aide auprès de professionnels ou de proches.",
+    "tags": ["santé mentale", "dépression", "traitement"]
+  },
+  {
+    "id": 88,
+    "language": "fr",
+    "question": "Que se passe-t-il pendant la puberté?",
+    "answer": "La puberté implique des changements physiques comme la croissance rapide, les changements de voix et le développement sexuel. C'est normal et varie selon les personnes. Parlez à vos parents, tuteurs ou professionnels de santé de vos préoccupations.",
+    "tags": ["puberté", "changements corporels", "croissance"]
+  },
+  {
+    "id": 89,
+    "language": "fr",
+    "question": "Les préservatifs protègent-ils contre les IST?",
+    "answer": "Les préservatifs réduisent considérablement le risque d'IST lorsqu'ils sont utilisés correctement, mais ne protègent pas contre toutes les IST. Les tests réguliers restent importants. L'utilisation constante de préservatifs est l'une des meilleures protections disponibles.",
+    "tags": ["IST", "prévention", "préservatifs"]
+  },
+  {
+    "id": 90,
+    "language": "fr",
+    "question": "Comment suivre mes règles?",
+    "answer": "Suivez vos règles à l'aide d'applications, de calendriers ou de journaux. Notez les dates de début et de fin ainsi que les symptômes. Cela aide à prévoir les cycles et à identifier les irrégularités. Consultez un médecin si les cycles sont très irréguliers.",
+    "tags": ["menstruation", "suivi", "cycles"]
+  },
+  {
+    "id": 91,
+    "language": "fr",
+    "question": "La grossesse est-elle seulement causée par le sexe?",
+    "answer": "La grossesse survient lorsque le sperme féconde un ovule, généralement par rapport sexuel. Cependant, d'autres formes de contact sexuel peuvent aussi mener à la grossesse. Comprendre votre corps aide à faire des choix éclairés.",
+    "tags": ["grossesse", "mythes", "éducation"]
+  },
+  {
+    "id": 92,
+    "language": "fr",
+    "question": "Qu'est-ce que la PrEP?",
+    "answer": "La PrEP (Prophylaxie Pré-Exposition) est un médicament quotidien qui prévient l'infection par le VIH chez les personnes à haut risque. Elle nécessite des contrôles médicaux réguliers et des tests. Lorsqu'elle est prise correctement, elle est très efficace pour prévenir le VIH.",
+    "tags": ["VIH", "PrEP", "prévention"]
+  },
+  {
+    "id": 93,
+    "language": "fr",
+    "question": "Les soins de santé sont-ils confidentiels?",
+    "answer": "Les professionnels de santé sont tenus de garder vos informations confidentielles. Vous pouvez discuter de sujets sensibles sans crainte. Votre vie privée est protégée et vous avez droit à des soins confidentiels.",
+    "tags": ["confidentialité", "soins de santé", "vie privée"]
+  },
+  {
+    "id": 94,
+    "language": "fr",
+    "question": "Comment aider un ami stressé?",
+    "answer": "Écoutez sans jugement, encouragez-le à parler et suggérez une aide professionnelle si nécessaire. Ne cherchez pas à le 'réparer' vous-même. Votre soutien en tant qu'ami peut faire une grande différence.",
+    "tags": ["santé mentale", "soutien", "amis"]
+  },
+  {
+    "id": 95,
+    "language": "fr",
+    "question": "Les menstruations rendent-elles les femmes impures?",
+    "answer": "Non, les menstruations sont un processus corporel naturel et ne rendent personne impur. Les mythes culturels à ce sujet ne sont pas basés sur la science. Les menstruations sont un signe de santé reproductive.",
+    "tags": ["menstruation", "mythes", "croyances culturelles"]
+  },
+  {
+    "id": 96,
+    "language": "fr",
+    "question": "Que dois-je savoir sur le VIH et la grossesse?",
+    "answer": "Le VIH peut affecter les issues de grossesse, mais des soins médicaux appropriés minimisent les risques. Le traitement peut prévenir la transmission au bébé. Les soins prénatals précoces et la gestion du VIH sont cruciaux.",
+    "tags": ["VIH", "grossesse", "jeunesse"]
+  },
+  {
+    "id": 97,
+    "language": "fr",
+    "question": "Puis-je faire de l'exercice pendant mes règles?",
+    "answer": "Oui, un exercice léger à modéré peut aider avec les symptômes des règles. Écoutez votre corps et reposez-vous si nécessaire. L'exercice est généralement sûr et bénéfique pendant les menstruations.",
+    "tags": ["menstruation", "exercice", "santé"]
+  },
+  {
+    "id": 98,
+    "language": "fr",
+    "question": "Comment choisir une contraception?",
+    "answer": "Choisissez une contraception basée sur votre mode de vie, vos besoins de santé et vos préférences. Discutez des options avec un professionnel de santé qui peut expliquer l'efficacité, les effets secondaires et l'utilisation correcte.",
+    "tags": ["contraception", "éducation", "planification"]
+  },
+  {
+    "id": 99,
+    "language": "fr",
+    "question": "La dépression est-elle héréditaire?",
+    "answer": "Bien que la génétique puisse jouer un rôle, la dépression peut affecter n'importe qui indépendamment des antécédents familiaux. Elle est souvent déclenchée par des événements de vie, du stress ou des déséquilibres chimiques dans le cerveau. Une aide professionnelle est disponible.",
+    "tags": ["santé mentale", "mythes", "stigmatisation"]
+  },
+  {
+    "id": 100,
+    "language": "fr",
+    "question": "Qu'est-ce que la gonorrhée?",
+    "answer": "La gonorrhée est une IST courante qui peut être guérie par des antibiotiques. Les symptômes incluent des douleurs lors de la miction et des écoulements. L'utilisation de préservatifs et les tests réguliers permettent de la prévenir et de la détecter tôt.",
+    "tags": ["IST", "gonorrhée", "prévention"]
+  },
+  {
+    "id": 101,
+    "language": "fr",
+    "question": "Puis-je tomber enceinte sans avoir de rapports sexuels?",
+    "answer": "La grossesse nécessite que le sperme féconde un ovule, ce qui se produit généralement par rapport sexuel. Cependant, d'autres activités sexuelles peuvent parfois mener à la grossesse. Comprendre la reproduction aide à faire des choix sûrs.",
+    "tags": ["grossesse", "mythes", "éducation"]
+  },
+  {
+    "id": 102,
+    "language": "fr",
+    "question": "Comment savoir si j'ai une IST?",
+    "answer": "De nombreuses IST n'ont pas de symptômes, donc les tests réguliers sont essentiels. Si vous remarquez des écoulements inhabituels, des douleurs ou des plaies, faites-vous tester immédiatement. La détection et le traitement précoces sont importants.",
+    "tags": ["IST", "test", "symptômes"]
+  },
+  {
+    "id": 103,
+    "language": "fr",
+    "question": "Le stress peut-il changer ma vie?",
+    "answer": "Le stress chronique peut affecter la santé physique et mentale s'il n'est pas géré. Apprendre des stratégies d'adaptation et chercher du soutien aide à maintenir le bien-être. De petits changements de mode de vie peuvent faire une grande différence.",
+    "tags": ["santé mentale", "stress", "impact"]
+  },
+  {
+    "id": 104,
+    "language": "fr",
+    "question": "Qu'est-ce que la contraception d'urgence?",
+    "answer": "La contraception d'urgence empêche la grossesse après un rapport sexuel non protégé. Elle doit être utilisée comme solution de secours, pas comme méthode principale. La contraception régulière est plus efficace et fiable.",
+    "tags": ["contraception", "urgence", "prévention"]
+  },
+  {
+    "id": 105,
+    "language": "fr",
+    "question": "Puis-je parler du sexe avec mes amis?",
+    "answer": "Oui, discuter de santé sexuelle avec des amis de confiance peut être utile et normal. Partagez des informations exactes et respectez les limites de chacun. Si vous avez besoin de plus de conseils, parlez à un professionnel de santé.",
+    "tags": ["relations", "communication", "soutien"]
+  }
+]
