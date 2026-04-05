@@ -37,7 +37,6 @@ export function Chatbot() {
     scrollToBottom();
   }, [messages]);
 
-  // Check backend connectivity on component mount
   useEffect(() => {
     const checkBackendConnection = async () => {
       try {
@@ -45,9 +44,9 @@ export function Chatbot() {
         setIsBackendConnected(true);
         setError(null);
       } catch (err) {
-        console.error('Backend connection failed:', err);
+        console.error("Backend connection failed:", err);
         setIsBackendConnected(false);
-        setError('Unable to connect to the health assistant service. Please make sure the backend server is running.');
+        setError("Unable to connect to the health assistant service. Please make sure the backend server is running.");
       }
     };
 
@@ -64,7 +63,9 @@ export function Chatbot() {
   ];
 
   const handleSend = async () => {
-    if (!input.trim()) return;
+    if (!input.trim()) {
+      return;
+    }
 
     const userMessage: Message = {
       id: Date.now().toString(),
@@ -81,7 +82,6 @@ export function Chatbot() {
     try {
       const chatRequest: ChatRequest = {
         message: input,
-        // Language detection could be added here in the future
       };
 
       const response: ChatResponse = await apiService.sendChatMessage(chatRequest);
@@ -95,13 +95,12 @@ export function Chatbot() {
 
       setMessages((prev) => [...prev, botMessage]);
     } catch (err) {
-      console.error('Chat API error:', err);
-      setError('Sorry, I encountered an error while processing your message. Please try again.');
+      console.error("Chat API error:", err);
+      setError("Sorry, I encountered an error while processing your message. Please try again.");
 
-      // Add error message to chat
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        content: 'Sorry, I encountered an error while processing your message. Please try again.',
+        content: "Sorry, I encountered an error while processing your message. Please try again.",
         sender: "bot",
         timestamp: new Date(),
       };
@@ -117,7 +116,6 @@ export function Chatbot() {
 
   return (
     <div className="md:ml-64 h-[calc(100vh-4rem)] md:h-[calc(100vh-5rem)] flex flex-col bg-gray-50">
-      {/* Header */}
       <div className="bg-white border-b border-gray-200 px-4 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex items-center gap-3">
@@ -135,7 +133,6 @@ export function Chatbot() {
         </div>
       </div>
 
-      {/* Messages */}
       <div className="flex-1 overflow-y-auto px-4 py-6">
         <div className="max-w-4xl mx-auto space-y-4">
           {error && (
@@ -223,15 +220,14 @@ export function Chatbot() {
         </div>
       </div>
 
-      {/* Quick Topics */}
       {messages.length === 1 && (
         <div className="px-4 pb-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-sm text-gray-600 mb-3">Quick topics:</p>
             <div className="flex flex-wrap gap-2">
-              {quickTopics.map((topic, index) => (
+              {quickTopics.map((topic) => (
                 <Badge
-                  key={index}
+                  key={topic}
                   variant="outline"
                   className="cursor-pointer hover:bg-purple-50 hover:border-purple-300"
                   onClick={() => handleQuickTopic(topic)}
@@ -244,19 +240,22 @@ export function Chatbot() {
         </div>
       )}
 
-      {/* Input */}
       <div className="bg-white border-t border-gray-200 px-4 py-4">
         <div className="max-w-4xl mx-auto">
           <div className="flex gap-2">
             <Input
               value={input}
-              onChange={(e) => setInput(e.target.value)}
-              onKeyPress={(e) => e.key === "Enter" && handleSend()}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") {
+                  void handleSend();
+                }
+              }}
               placeholder="Ask anything about your health..."
               className="flex-1"
             />
             <Button
-              onClick={handleSend}
+              onClick={() => void handleSend()}
               disabled={!input.trim()}
               className="bg-purple-600 hover:bg-purple-700"
             >
@@ -269,11 +268,10 @@ export function Chatbot() {
         </div>
       </div>
 
-      {/* Ad Banner */}
       <div className="bg-yellow-50 border-t border-yellow-200 px-4 py-2">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-xs text-gray-600">
-            📢 <span className="font-medium">Sponsored:</span> Learn more about family planning options at your local health center
+            <span className="font-medium">Sponsored:</span> Learn more about family planning options at your local health center
           </p>
         </div>
       </div>

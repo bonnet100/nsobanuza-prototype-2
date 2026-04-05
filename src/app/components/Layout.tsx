@@ -20,7 +20,7 @@ export function Layout() {
     { name: "Home", path: "/", icon: Home },
     { name: "AI Health Chat", path: "/chatbot", icon: MessageCircle },
     { name: "Track Health", path: "/tracking", icon: Heart },
-    { name: "Professionals", path: "/professionals", icon: Users },
+    { name: "Professionals", path: "/marketplace", icon: Users },
     { name: "Videos", path: "/videos", icon: PlayCircle },
   ];
 

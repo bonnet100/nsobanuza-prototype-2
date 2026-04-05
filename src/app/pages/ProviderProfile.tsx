@@ -5,42 +5,11 @@ import { Button } from "../components/ui/button";
 import { Badge } from "../components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "../components/ui/tabs";
 import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { mockProviders } from "../data/mockData";
 
 export function ProviderProfile() {
   const { id } = useParams();
-
-  // Mock provider data
-  const provider = {
-    id: id || "1",
-    name: "Dr. Uwase Marie",
-    image: "https://images.unsplash.com/photo-1632054226770-9ce6a8915462?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwZG9jdG9yJTIwZmVtYWxlJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3NTM4OTE3Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    specialty: "Sexual & Reproductive Health Specialist",
-    rating: 4.9,
-    reviews: 156,
-    languages: ["Kinyarwanda", "English", "French"],
-    fee: "5,000 RWF",
-    experience: "8 years",
-    verified: true,
-    education: [
-      "MD, University of Rwanda (2014)",
-      "Specialized training in SRH, Kigali (2016)",
-      "Certified Family Planning Counselor (2017)",
-    ],
-    certifications: [
-      "Rwanda Medical Council License #RM12345",
-      "Family Planning Specialist Certification",
-      "Youth-Friendly Health Services Provider",
-    ],
-    about:
-      "Dr. Marie Uwase is a dedicated healthcare professional specializing in sexual and reproductive health for young people. With 8 years of experience, she provides compassionate, non-judgmental care and is passionate about empowering youth with accurate health information.",
-    availability: [
-      { day: "Monday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Tuesday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Wednesday", hours: "9:00 AM - 1:00 PM" },
-      { day: "Thursday", hours: "9:00 AM - 5:00 PM" },
-      { day: "Friday", hours: "9:00 AM - 5:00 PM" },
-    ],
-  };
+  const provider = mockProviders.find((item) => item.id === id);
 
   const reviews = [
     {
@@ -66,10 +35,29 @@ export function ProviderProfile() {
     },
   ];
 
+  if (!provider) {
+    return (
+      <div className="md:ml-64 min-h-screen bg-gray-50 py-6">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card>
+            <CardContent className="p-6">
+              <p className="text-gray-700">Provider not found.</p>
+              <Link to="/marketplace">
+                <Button className="mt-4">Back to Providers</Button>
+              </Link>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
+
+  const consultationFee = provider.chatPrice.toLocaleString();
+  const providerShortName = provider.name.split(" ")[1] || provider.name;
+
   return (
     <div className="md:ml-64 min-h-screen bg-gray-50 py-6">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Back Button */}
         <Link to="/marketplace">
           <Button variant="ghost" className="mb-6">
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -78,9 +66,7 @@ export function ProviderProfile() {
         </Link>
 
         <div className="grid lg:grid-cols-3 gap-6">
-          {/* Main Content */}
           <div className="lg:col-span-2 space-y-6">
-            {/* Provider Header */}
             <Card>
               <CardContent className="p-6">
                 <div className="flex flex-col sm:flex-row gap-6">
@@ -112,9 +98,9 @@ export function ProviderProfile() {
                       </div>
                     </div>
                     <div className="flex flex-wrap gap-2">
-                      {provider.languages.map((lang, idx) => (
-                        <Badge key={idx} variant="outline">
-                          {lang}
+                      {provider.languages.map((language) => (
+                        <Badge key={language} variant="outline">
+                          {language}
                         </Badge>
                       ))}
                     </div>
@@ -123,7 +109,6 @@ export function ProviderProfile() {
               </CardContent>
             </Card>
 
-            {/* Tabs */}
             <Tabs defaultValue="about" className="space-y-4">
               <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="about">About</TabsTrigger>
@@ -134,40 +119,46 @@ export function ProviderProfile() {
               <TabsContent value="about" className="space-y-4">
                 <Card>
                   <CardHeader>
-                    <CardTitle>About Dr. {provider.name.split(" ")[1]}</CardTitle>
+                    <CardTitle>About Dr. {providerShortName}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-700 leading-relaxed">{provider.about}</p>
+                    <p className="text-gray-700 leading-relaxed">
+                      {provider.bio || `${provider.name} provides youth-friendly, confidential support across key health topics.`}
+                    </p>
                   </CardContent>
                 </Card>
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Education</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    {provider.education.map((edu, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                        <p className="text-gray-700">{edu}</p>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
+                {provider.education && provider.education.length > 0 && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Education</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      {provider.education.map((educationItem) => (
+                        <div key={educationItem} className="flex items-start gap-3">
+                          <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                          <p className="text-gray-700">{educationItem}</p>
+                        </div>
+                      ))}
+                    </CardContent>
+                  </Card>
+                )}
 
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Certifications & Licenses</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-3">
-                    {provider.certifications.map((cert, idx) => (
-                      <div key={idx} className="flex items-start gap-3">
-                        <Award className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
-                        <p className="text-gray-700">{cert}</p>
-                      </div>
-                    ))}
-                  </CardContent>
-                </Card>
+                {provider.certifications && provider.certifications.length > 0 && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Certifications & Licenses</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      {provider.certifications.map((certification) => (
+                        <div key={certification} className="flex items-start gap-3">
+                          <Award className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
+                          <p className="text-gray-700">{certification}</p>
+                        </div>
+                      ))}
+                    </CardContent>
+                  </Card>
+                )}
               </TabsContent>
 
               <TabsContent value="reviews">
@@ -182,9 +173,9 @@ export function ProviderProfile() {
                           <div className="flex items-center gap-2">
                             <span className="font-medium">{review.author}</span>
                             <div className="flex">
-                              {Array.from({ length: review.rating }).map((_, i) => (
+                              {Array.from({ length: review.rating }).map((_, index) => (
                                 <Star
-                                  key={i}
+                                  key={index}
                                   className="w-4 h-4 fill-yellow-400 text-yellow-400"
                                 />
                               ))}
@@ -205,9 +196,9 @@ export function ProviderProfile() {
                     <CardTitle>Weekly Schedule</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-3">
-                    {provider.availability.map((slot, idx) => (
+                    {(provider.availability || []).map((slot) => (
                       <div
-                        key={idx}
+                        key={`${slot.day}-${slot.hours}`}
                         className="flex items-center justify-between p-3 bg-gray-50 rounded-lg"
                       >
                         <div className="flex items-center gap-3">
@@ -218,7 +209,7 @@ export function ProviderProfile() {
                       </div>
                     ))}
                     <p className="text-sm text-gray-600 mt-4">
-                      * Consultation times are in Kigali time (CAT/GMT+2)
+                      Consultation times are in Kigali time (CAT/GMT+2).
                     </p>
                   </CardContent>
                 </Card>
@@ -226,31 +217,33 @@ export function ProviderProfile() {
             </Tabs>
           </div>
 
-          {/* Sidebar */}
           <div className="space-y-6">
-            {/* Booking Card */}
             <Card className="sticky top-6">
               <CardContent className="p-6">
                 <div className="text-center mb-6">
                   <p className="text-gray-600 mb-2">Consultation Fee</p>
-                  <p className="text-3xl font-bold text-purple-600">{provider.fee}</p>
+                  <p className="text-3xl font-bold text-purple-600">{consultationFee} RWF</p>
                   <p className="text-sm text-gray-500">per session (30-45 min)</p>
                 </div>
 
                 <div className="space-y-3">
-                  <Button className="w-full bg-purple-600 hover:bg-purple-700" size="lg">
-                    <Video className="w-5 h-5 mr-2" />
-                    Book Video Call
-                  </Button>
-                  <Button variant="outline" className="w-full" size="lg">
-                    <MessageSquare className="w-5 h-5 mr-2" />
-                    Chat Consultation
-                  </Button>
+                  <Link to={`/checkout?provider=${provider.id}&type=video`}>
+                    <Button className="w-full bg-purple-600 hover:bg-purple-700" size="lg">
+                      <Video className="w-5 h-5 mr-2" />
+                      Book Video Call
+                    </Button>
+                  </Link>
+                  <Link to={`/checkout?provider=${provider.id}&type=chat`}>
+                    <Button variant="outline" className="w-full" size="lg">
+                      <MessageSquare className="w-5 h-5 mr-2" />
+                      Chat Consultation
+                    </Button>
+                  </Link>
                 </div>
 
                 <div className="mt-6 p-4 bg-green-50 rounded-lg">
                   <p className="text-sm text-green-800 font-medium mb-1">
-                    ✓ Encrypted & Confidential
+                    Encrypted & Confidential
                   </p>
                   <p className="text-xs text-green-700">
                     All consultations are end-to-end encrypted and completely anonymous.
@@ -259,7 +252,6 @@ export function ProviderProfile() {
               </CardContent>
             </Card>
 
-            {/* Info Card */}
             <Card className="bg-gradient-to-br from-purple-50 to-pink-50 border-purple-200">
               <CardContent className="p-6">
                 <h3 className="font-semibold mb-3">What to Expect</h3>
@@ -286,12 +278,11 @@ export function ProviderProfile() {
           </div>
         </div>
 
-        {/* Ad Banner */}
         <Card className="mt-6 bg-yellow-50 border-yellow-200">
           <CardContent className="p-4">
             <div className="flex items-center justify-between">
               <p className="text-sm text-gray-600">
-                <span className="font-medium">📢 Sponsored:</span> Book your first consultation and get a free follow-up session
+                <span className="font-medium">Sponsored:</span> Book your first consultation and get a free follow-up session
               </p>
             </div>
           </CardContent>

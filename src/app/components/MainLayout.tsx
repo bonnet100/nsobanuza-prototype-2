@@ -18,23 +18,23 @@ export function MainLayout() {
   const { currentUser, logout } = useUser();
 
   const navigation = [
-    { name: t('home', language as any), href: "/", icon: Home },
-    { name: t('aiChat', language as any), href: "/chatbot", icon: MessageCircle },
-    { name: t('tracking', language as any), href: "/tracking", icon: Calendar },
-    { name: t('providers', language as any), href: "/marketplace", icon: Users },
-    { name: t('videos', language as any), href: "/videos", icon: PlayCircle },
+    { name: t("home", language as any), href: "/", icon: Home },
+    { name: t("aiChat", language as any), href: "/chatbot", icon: MessageCircle },
+    { name: t("tracking", language as any), href: "/tracking", icon: Calendar },
+    { name: t("providers", language as any), href: "/marketplace", icon: Users },
+    { name: t("videos", language as any), href: "/videos", icon: PlayCircle },
   ];
 
   const isActive = (path: string) => {
     if (path === "/") {
       return location.pathname === path;
     }
+
     return location.pathname.startsWith(path);
   };
 
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col">
-      {/* Header */}
       <header className="bg-white border-b-2 border-purple-200 sticky top-0 z-50 shadow-md">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -48,7 +48,6 @@ export function MainLayout() {
             </Link>
 
             <div className="flex items-center gap-4">
-              {/* Language Selector */}
               <div className="flex items-center gap-2">
                 <Globe className="w-5 h-5 text-purple-600" />
                 <Select value={language} onValueChange={setLanguage}>
@@ -58,12 +57,11 @@ export function MainLayout() {
                   <SelectContent>
                     <SelectItem value="en">English</SelectItem>
                     <SelectItem value="rw">Kinyarwanda</SelectItem>
-                    <SelectItem value="fr">Français</SelectItem>
+                    <SelectItem value="fr">Francais</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
 
-              {/* Auth Buttons */}
               {currentUser ? (
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-gray-600">@{currentUser.username}</span>
@@ -74,7 +72,7 @@ export function MainLayout() {
                       className="gap-2"
                     >
                       <User className="w-4 h-4" />
-                      <span className="hidden sm:inline">{t('profile', language as any)}</span>
+                      <span className="hidden sm:inline">{t("profile", language as any)}</span>
                     </Button>
                   </Link>
                   <Button
@@ -84,19 +82,19 @@ export function MainLayout() {
                     className="gap-2"
                   >
                     <LogOut className="w-4 h-4" />
-                    <span className="hidden sm:inline">{t('logout', language as any)}</span>
+                    <span className="hidden sm:inline">{t("logout", language as any)}</span>
                   </Button>
                 </div>
               ) : (
                 <div className="flex items-center gap-2">
                   <Link to="/login">
                     <Button variant="ghost" size="sm">
-                      {t('logIn', language as any)}
+                      {t("logIn", language as any)}
                     </Button>
                   </Link>
                   <Link to="/signup">
                     <Button size="sm" className="bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600">
-                      {t('signUp', language as any)}
+                      {t("signUp", language as any)}
                     </Button>
                   </Link>
                 </div>
@@ -106,17 +104,16 @@ export function MainLayout() {
         </div>
       </header>
 
-      {/* Main Content */}
       <main className="flex-1 pb-20 md:pb-4">
         <Outlet />
       </main>
 
-      {/* Bottom Navigation (Mobile) */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white border-t-2 border-purple-200 md:hidden z-50">
         <div className="grid grid-cols-5 gap-1 px-2 py-2">
           {navigation.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);
+
             return (
               <Link
                 key={item.name}
@@ -135,12 +132,12 @@ export function MainLayout() {
         </div>
       </nav>
 
-      {/* Desktop Navigation */}
       <nav className="hidden md:block fixed top-20 left-0 bottom-0 w-64 bg-white border-r border-gray-200 p-4">
         <div className="space-y-1">
           {navigation.map((item) => {
             const Icon = item.icon;
             const active = isActive(item.href);
+
             return (
               <Link
                 key={item.name}
@@ -159,7 +156,6 @@ export function MainLayout() {
         </div>
       </nav>
 
-      {/* Floating Chatbot Button */}
       {location.pathname !== "/chatbot" && (
         <Link
           to="/chatbot"

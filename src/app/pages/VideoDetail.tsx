@@ -1,9 +1,9 @@
-import { useParams, Link } from 'react-router';
-import { PlayCircle, Eye, ThumbsUp, ArrowLeft } from 'lucide-react';
-import { mockVideos } from '../data/mockData';
-import { Card, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
+import { useParams, Link } from "react-router";
+import { Eye, ThumbsUp, ArrowLeft } from "lucide-react";
+import { mockVideos } from "../data/mockData";
+import { Card, CardContent } from "../components/ui/card";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
 
 export function VideoDetail() {
   const { id } = useParams();
@@ -51,7 +51,7 @@ export function VideoDetail() {
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div>
                 <h1 className="text-3xl font-bold mb-2">{video.title}</h1>
-                <p className="text-sm text-gray-500">{video.category} • {video.language}</p>
+                <p className="text-sm text-gray-500">{video.category} | {video.language}</p>
               </div>
               <div className="flex items-center gap-4 text-sm text-gray-500">
                 <div className="flex items-center gap-1">

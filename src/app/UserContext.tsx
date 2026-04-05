@@ -27,12 +27,17 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState(true);
 
+  const normalizeUser = (user: User): User => ({
+    ...user,
+    createdAt: new Date(user.createdAt),
+  });
+
   useEffect(() => {
     // Load user from localStorage on mount
     const storedUser = localStorage.getItem('nsobanuza_user');
     if (storedUser) {
       try {
-        setCurrentUser(JSON.parse(storedUser));
+        setCurrentUser(normalizeUser(JSON.parse(storedUser)));
       } catch (error) {
         console.error('Error parsing stored user:', error);
         localStorage.removeItem('nsobanuza_user');
@@ -45,7 +50,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
     setIsLoading(true);
     try {
       // Get users from localStorage (in real app, this would be an API call)
-      const users = JSON.parse(localStorage.getItem('nsobanuza_users') || '[]');
+      const users: User[] = JSON.parse(localStorage.getItem('nsobanuza_users') || '[]').map(normalizeUser);
       const user = users.find((u: User) => u.username === username && u.password === password);
 
       if (user) {
@@ -72,7 +77,7 @@ export const UserProvider: React.FC<UserProviderProps> = ({ children }) => {
   const signup = async (userData: Partial<User>): Promise<boolean> => {
     setIsLoading(true);
     try {
-      const users = JSON.parse(localStorage.getItem('nsobanuza_users') || '[]');
+      const users: User[] = JSON.parse(localStorage.getItem('nsobanuza_users') || '[]').map(normalizeUser);
 
       // Check for uniqueness
       const isUsernameTaken = users.some((u: User) => u.username === userData.username);

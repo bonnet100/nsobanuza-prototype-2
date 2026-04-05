@@ -4,8 +4,10 @@ import { Chatbot } from "./pages/Chatbot";
 import { Tracking } from "./pages/Tracking";
 import { Marketplace } from "./pages/Marketplace";
 import { Videos } from "./pages/Videos";
+import { VideoDetail } from "./pages/VideoDetail";
 import { Profile } from "./pages/Profile";
 import { ProviderProfile } from "./pages/ProviderProfile";
+import { Checkout } from "./pages/Checkout";
 import { Signup } from "./pages/Signup";
 import { Login } from "./pages/Login";
 import { MainLayout } from "./components/MainLayout";
@@ -28,8 +30,10 @@ export const router = createBrowserRouter([
       { path: "tracking", Component: Tracking },
       { path: "marketplace", Component: Marketplace },
       { path: "videos", Component: Videos },
+      { path: "videos/:id", Component: VideoDetail },
       { path: "profile", Component: Profile },
       { path: "provider/:id", Component: ProviderProfile },
+      { path: "checkout", Component: Checkout },
     ],
   },
 ]);

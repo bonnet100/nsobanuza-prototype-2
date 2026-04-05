@@ -8,7 +8,7 @@ import { useUser } from "../UserContext";
 import { Link } from "react-router";
 
 export function Profile() {
-  const { currentUser } = useUser();
+  const { currentUser, logout } = useUser();
 
   if (!currentUser) {
     return (
@@ -37,13 +37,11 @@ export function Profile() {
   return (
     <div className="md:ml-64 min-h-screen bg-gray-50 py-6">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">My Profile</h1>
           <p className="text-gray-600">Manage your account and preferences</p>
         </div>
 
-        {/* Profile Card */}
         <Card className="mb-6">
           <CardContent className="p-6">
             <div className="flex items-center gap-4">
@@ -56,8 +54,8 @@ export function Profile() {
                   Member since {currentUser.createdAt.toLocaleDateString()}
                 </p>
                 <div className="flex gap-2 mt-2">
-                  <Badge className={currentUser.type === 'professional' ? 'bg-blue-600' : 'bg-green-600'}>
-                    {currentUser.type === 'professional' ? 'Professional' : 'Free Account'}
+                  <Badge className={currentUser.type === "professional" ? "bg-blue-600" : "bg-green-600"}>
+                    {currentUser.type === "professional" ? "Professional" : "Free Account"}
                   </Badge>
                   {currentUser.verified && (
                     <Badge className="bg-green-600">Verified</Badge>
@@ -69,8 +67,7 @@ export function Profile() {
           </CardContent>
         </Card>
 
-        {/* Professional Info */}
-        {currentUser.type === 'professional' && (
+        {currentUser.type === "professional" && (
           <Card className="mb-6">
             <CardHeader>
               <CardTitle>Professional Information</CardTitle>
@@ -79,20 +76,20 @@ export function Profile() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <p className="font-medium">Full Name</p>
-                  <p className="text-sm text-gray-600">{currentUser.fullName || 'Not provided'}</p>
+                  <p className="text-sm text-gray-600">{currentUser.fullName || "Not provided"}</p>
                 </div>
                 <div>
                   <p className="font-medium">License Number</p>
-                  <p className="text-sm text-gray-600">{currentUser.licenseNumber || 'Not provided'}</p>
+                  <p className="text-sm text-gray-600">{currentUser.licenseNumber || "Not provided"}</p>
                 </div>
                 <div>
                   <p className="font-medium">Specialty</p>
-                  <p className="text-sm text-gray-600">{currentUser.specialty || 'Not provided'}</p>
+                  <p className="text-sm text-gray-600">{currentUser.specialty || "Not provided"}</p>
                 </div>
                 <div>
                   <p className="font-medium">Verification Status</p>
-                  <Badge className={currentUser.verified ? 'bg-green-600' : 'bg-yellow-600'}>
-                    {currentUser.verified ? 'Verified' : 'Pending Verification'}
+                  <Badge className={currentUser.verified ? "bg-green-600" : "bg-yellow-600"}>
+                    {currentUser.verified ? "Verified" : "Pending Verification"}
                   </Badge>
                 </div>
               </div>
@@ -106,7 +103,6 @@ export function Profile() {
           </Card>
         )}
 
-        {/* Account Settings */}
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -126,7 +122,7 @@ export function Profile() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="font-medium">Email</p>
-                <p className="text-sm text-gray-600">user@example.com</p>
+                <p className="text-sm text-gray-600">{currentUser.email}</p>
               </div>
               <Button variant="ghost" size="sm">Change</Button>
             </div>
@@ -134,14 +130,13 @@ export function Profile() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="font-medium">Password</p>
-                <p className="text-sm text-gray-600">••••••••</p>
+                <p className="text-sm text-gray-600">********</p>
               </div>
               <Button variant="ghost" size="sm">Change</Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* Language Preferences */}
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -168,7 +163,6 @@ export function Profile() {
           </CardContent>
         </Card>
 
-        {/* Notifications */}
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -211,7 +205,6 @@ export function Profile() {
           </CardContent>
         </Card>
 
-        {/* Privacy & Security */}
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -246,7 +239,6 @@ export function Profile() {
           </CardContent>
         </Card>
 
-        {/* Activity */}
         <Card className="mb-6">
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
@@ -272,13 +264,12 @@ export function Profile() {
           </CardContent>
         </Card>
 
-        {/* Danger Zone */}
         <Card className="border-red-200 mb-6">
           <CardHeader>
             <CardTitle className="text-red-600">Account Actions</CardTitle>
           </CardHeader>
           <CardContent className="space-y-3">
-            <Button variant="outline" className="w-full" size="lg">
+            <Button variant="outline" className="w-full" size="lg" onClick={logout}>
               <LogOut className="w-4 h-4 mr-2" />
               Log Out
             </Button>
@@ -288,7 +279,6 @@ export function Profile() {
           </CardContent>
         </Card>
 
-        {/* Support */}
         <Card className="bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200">
           <CardContent className="p-6 text-center">
             <h3 className="font-semibold mb-2">Need Help?</h3>

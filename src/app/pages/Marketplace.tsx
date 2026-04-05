@@ -1,9 +1,8 @@
 import { useState } from "react";
-import { Search, Filter, Award, Clock } from "lucide-react";
+import { Search, Filter, Award } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
 import { Button } from "../components/ui/button";
 import { Input } from "../components/ui/input";
-import { Badge } from "../components/ui/badge";
 import {
   Select,
   SelectTrigger,
@@ -24,13 +23,13 @@ export function Marketplace() {
       provider.specialty.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesSpecialty =
       specialtyFilter === "all" || provider.specialty.toLowerCase().includes(specialtyFilter.toLowerCase());
+
     return matchesSearch && matchesSpecialty;
   });
 
   return (
     <div className="md:ml-64 min-h-screen bg-gray-50 py-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold mb-2">Health Professionals</h1>
           <p className="text-gray-600">
@@ -38,7 +37,6 @@ export function Marketplace() {
           </p>
         </div>
 
-        {/* Search and Filters */}
         <div className="mb-6 space-y-4">
           <div className="flex flex-col sm:flex-row gap-4">
             <div className="flex-1 relative">
@@ -46,7 +44,7 @@ export function Marketplace() {
               <Input
                 placeholder="Search by name or specialty..."
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(event) => setSearchQuery(event.target.value)}
                 className="pl-10"
               />
             </div>
@@ -65,7 +63,6 @@ export function Marketplace() {
           </div>
         </div>
 
-        {/* Info Banner */}
         <Card className="mb-6 bg-gradient-to-r from-purple-50 to-pink-50 border-purple-200">
           <CardContent className="p-6">
             <div className="flex items-start gap-4">
@@ -83,7 +80,6 @@ export function Marketplace() {
           </CardContent>
         </Card>
 
-        {/* Providers Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProviders.map((provider) => (
             <ProfessionalCard key={provider.id} provider={provider} />
@@ -96,12 +92,11 @@ export function Marketplace() {
           </Card>
         )}
 
-        {/* Ad Banner */}
         <Card className="mt-8 bg-yellow-50 border-yellow-200">
           <CardContent className="p-6">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
               <div className="flex-1">
-                <p className="text-sm font-medium mb-1">📢 Sponsored Partnership</p>
+                <p className="text-sm font-medium mb-1">Sponsored Partnership</p>
                 <p className="text-sm text-gray-600">
                   Need contraception or health products? Visit our partner pharmacy for
                   confidential service and delivery.
