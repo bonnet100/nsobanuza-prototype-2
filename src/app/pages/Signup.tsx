@@ -51,16 +51,16 @@ export function Signup() {
 
   return (
     <div className="min-h-screen bg-gray-50 flex items-center justify-center px-4">
-      <Card className="w-full max-w-md">
-        <CardHeader>
-          <CardTitle className="text-center">Join Nsobanuza</CardTitle>
+      <Card className="w-full max-w-md border-2 border-purple-200 shadow-lg">
+        <CardHeader className="bg-gradient-to-r from-purple-50 to-pink-50 border-b-2 border-purple-200">
+          <CardTitle className="text-center bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">Join Nsobanuza</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="pt-6">
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <Label htmlFor="type">Account Type</Label>
+              <Label htmlFor="type" className="font-semibold text-gray-700">Account Type</Label>
               <Select value={formData.type} onValueChange={handleTypeChange}>
-                <SelectTrigger>
+                <SelectTrigger className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 rounded-lg">
                   <SelectValue />
                 </SelectTrigger>
                 <SelectContent>
@@ -71,7 +71,7 @@ export function Signup() {
             </div>
 
             <div>
-              <Label htmlFor="username">Username *</Label>
+              <Label htmlFor="username" className="font-semibold text-gray-700">Username *</Label>
               <Input
                 id="username"
                 name="username"
@@ -80,11 +80,12 @@ export function Signup() {
                 value={formData.username}
                 onChange={handleChange}
                 placeholder="Choose a unique username"
+                className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
               />
             </div>
 
             <div>
-              <Label htmlFor="email">Email *</Label>
+              <Label htmlFor="email" className="font-semibold text-gray-700">Email *</Label>
               <Input
                 id="email"
                 name="email"
@@ -93,11 +94,12 @@ export function Signup() {
                 value={formData.email}
                 onChange={handleChange}
                 placeholder="your.email@example.com"
+                className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
               />
             </div>
 
             <div>
-              <Label htmlFor="phone">Phone Number *</Label>
+              <Label htmlFor="phone" className="font-semibold text-gray-700">Phone Number *</Label>
               <Input
                 id="phone"
                 name="phone"
@@ -106,11 +108,12 @@ export function Signup() {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder="+250 XXX XXX XXX"
+                className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
               />
             </div>
 
             <div>
-              <Label htmlFor="password">Password *</Label>
+              <Label htmlFor="password" className="font-semibold text-gray-700">Password *</Label>
               <Input
                 id="password"
                 name="password"
@@ -119,11 +122,12 @@ export function Signup() {
                 value={formData.password}
                 onChange={handleChange}
                 placeholder="Create a strong password"
+                className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
               />
             </div>
 
             <div>
-              <Label htmlFor="confirmPassword">Confirm Password *</Label>
+              <Label htmlFor="confirmPassword" className="font-semibold text-gray-700">Confirm Password *</Label>
               <Input
                 id="confirmPassword"
                 name="confirmPassword"
@@ -132,70 +136,81 @@ export function Signup() {
                 value={formData.confirmPassword}
                 onChange={handleChange}
                 placeholder="Confirm your password"
+                className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
               />
             </div>
 
             {formData.type === 'professional' && (
               <>
-                <div>
-                  <Label htmlFor="fullName">Full Name *</Label>
-                  <Input
-                    id="fullName"
-                    name="fullName"
-                    type="text"
-                    required
-                    value={formData.fullName}
-                    onChange={handleChange}
-                    placeholder="Dr. John Doe"
-                  />
-                </div>
+                <div className="bg-purple-50 p-4 rounded-lg border border-purple-200">
+                  <h3 className="font-semibold text-gray-700 mb-3 text-purple-700">Professional Information</h3>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <Label htmlFor="fullName" className="font-semibold text-gray-700">Full Name *</Label>
+                      <Input
+                        id="fullName"
+                        name="fullName"
+                        type="text"
+                        required
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        placeholder="Dr. John Doe"
+                        className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
+                      />
+                    </div>
 
-                <div>
-                  <Label htmlFor="licenseNumber">License Number *</Label>
-                  <Input
-                    id="licenseNumber"
-                    name="licenseNumber"
-                    type="text"
-                    required
-                    value={formData.licenseNumber}
-                    onChange={handleChange}
-                    placeholder="Government license number"
-                  />
-                </div>
+                    <div>
+                      <Label htmlFor="licenseNumber" className="font-semibold text-gray-700">License Number *</Label>
+                      <Input
+                        id="licenseNumber"
+                        name="licenseNumber"
+                        type="text"
+                        required
+                        value={formData.licenseNumber}
+                        onChange={handleChange}
+                        placeholder="Government license number"
+                        className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
+                      />
+                    </div>
 
-                <div>
-                  <Label htmlFor="specialty">Specialty *</Label>
-                  <Input
-                    id="specialty"
-                    name="specialty"
-                    type="text"
-                    required
-                    value={formData.specialty}
-                    onChange={handleChange}
-                    placeholder="e.g., Sexual & Reproductive Health"
-                  />
-                </div>
+                    <div>
+                      <Label htmlFor="specialty" className="font-semibold text-gray-700">Specialty *</Label>
+                      <Input
+                        id="specialty"
+                        name="specialty"
+                        type="text"
+                        required
+                        value={formData.specialty}
+                        onChange={handleChange}
+                        placeholder="e.g., Sexual & Reproductive Health"
+                        className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
+                      />
+                    </div>
 
-                <div>
-                  <Label htmlFor="bio">Bio</Label>
-                  <Textarea
-                    id="bio"
-                    name="bio"
-                    value={formData.bio}
-                    onChange={handleChange}
-                    placeholder="Tell us about your experience and qualifications"
-                    rows={3}
-                  />
+                    <div>
+                      <Label htmlFor="bio" className="font-semibold text-gray-700">Bio</Label>
+                      <Textarea
+                        id="bio"
+                        name="bio"
+                        value={formData.bio}
+                        onChange={handleChange}
+                        placeholder="Tell us about your experience and qualifications"
+                        rows={3}
+                        className="border-2 border-gray-300 hover:border-purple-400 focus:border-purple-500 focus:ring-purple-200 rounded-lg"
+                      />
+                    </div>
+                  </div>
                 </div>
               </>
             )}
 
-            <Button type="submit" className="w-full" disabled={isLoading}>
+            <Button type="submit" className="w-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-semibold py-2 rounded-lg" disabled={isLoading}>
               {isLoading ? 'Creating Account...' : 'Sign Up'}
             </Button>
           </form>
 
-          <div className="mt-4 text-center">
+          <div className="mt-4 text-center border-t border-gray-200 pt-4">
             <p className="text-sm text-gray-600">
               Already have an account?{' '}
               <Link to="/login" className="text-purple-600 hover:underline">
